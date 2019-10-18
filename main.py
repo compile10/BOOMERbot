@@ -20,7 +20,8 @@ zoomer = praw.Reddit(client_id=client_id,
 boomer = zoomer.redditor(boomerName)
 
 print("Replying to the boomer. Wait time is 8 minutes between comments.")
-for comment in boomer.comments.new()
+
+for comment in boomer.comments.new():
     comment.reply('ok boomer')
     print("Replied to comment with id: ", comment)
     time.sleep(480)
